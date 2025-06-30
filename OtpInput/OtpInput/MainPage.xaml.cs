@@ -14,15 +14,15 @@
                 DisplayFeedback("OTP cannot be empty.");
                 OtpInput.InputState = Syncfusion.Maui.Toolkit.OtpInput.OtpInputState.Warning;
             }
-            else if (enteredOtp != "123456")
-            {
-                DisplayFeedback("Incorrect OTP. Please try again.");
-                OtpInput.InputState = Syncfusion.Maui.Toolkit.OtpInput.OtpInputState.Error;
-            }
-            else
+            else if (enteredOtp == "123456")
             {
                 DisplayFeedback("OTP verified successfully!", true);
                 OtpInput.InputState = Syncfusion.Maui.Toolkit.OtpInput.OtpInputState.Success;
+            }
+            else
+            {
+                DisplayFeedback("Incorrect OTP. Please try again.");
+                OtpInput.InputState = Syncfusion.Maui.Toolkit.OtpInput.OtpInputState.Error;
             }
         }
 
