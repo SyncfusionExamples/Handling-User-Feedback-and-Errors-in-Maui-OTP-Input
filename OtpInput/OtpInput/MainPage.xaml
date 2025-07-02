@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OtpInput.MainPage"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Toolkit.OtpInput;assembly=Syncfusion.Maui.Toolkit">
+
+    <StackLayout Padding="30" Spacing="20" HorizontalOptions="Center">
+        <Label Text="Enter your OTP" FontSize="24" HorizontalOptions="Center" />
+        <syncfusion:SfOtpInput x:Name="OtpInput" Length="6" />
+        <Label x:Name="FeedbackLabel" IsVisible="False" Margin="20,0"/>
+        <Button Text="Submit" Clicked="OnSubmitClicked" WidthRequest="150"/>
+    </StackLayout>
+
+</ContentPage>
